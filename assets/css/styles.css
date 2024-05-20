@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.superior{
+    grid-area: nav;
+    padding-top: 10px;
+    background-color: #369eff;
+    text-align: center;
+    padding-bottom: 10px;
+}
+a{
+    text-decoration: none;
+}
+ol,ul{
+    list-style: none;
+}
+.navegacion{
+    grid-area: menu;
+    height: 100%;
+    text-align: center;
+    font-size: 20px;
+    gap: 5px;
+}
+.buscar{
+    grid-area: buscar;
+    background-color: rgb(235, 235, 235);
+    text-align: center;
+    padding: 10px;
+}
+.recuadro{
+    grid-area: recuadro;
+    text-align: center;
+    overflow: auto;
+}
+.producto{
+    border-color: black;
+    border: 1px;
+    border-style: solid;
+    margin: 20px;
+}
+.imagen{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.boton{
+    background-color: #369eff;
+    padding-top: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 5px;
+    border-radius: 100px;
+    margin: 10px;
+}
+.footer{
+    grid-area: footer;
+    text-align: center;
+    background-color: #369eff;
+    padding: 10px;
+}
+@media (max-width: 576px) {
+    .header{
+        display: grid;
+        grid-template-columns: 8fr 2fr;
+        grid-template-areas: 
+            "nav menu";
+        background-color: #369eff;
+    }
+    .contenedor{
+        display: grid;
+        grid-template-areas: 
+            " buscar"
+            "recuadro ";
+    }
+}
+@media (width >= 576px){
+    body{
+        height: 700px;
+    }
+    
+    .todo{
+        display: grid;
+        grid-template-columns: 2fr 8fr;
+        grid-template-areas: 
+            "nav buscar " 
+            "menu recuadro "
+            "footer recuadro";
+    }
+    .mas{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .recuadro{
+        overflow: auto;
+    }
+    .header{
+        background-color: #369eff;
+    }
+}
+@media (width >=996px){
+    body{
+        height: 700px;
+    }
+    
+    .todo{
+        display: grid;
+        grid-template-columns: 2fr 8fr;
+        grid-template-areas: 
+            "nav buscar " 
+            "menu recuadro recuadro"
+            "footer recuadro recuadro";
+    }
+    .mas{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .recuadro{
+        overflow: auto;
+    }
+    .header{
+        background-color: #369eff;
+    }
+}
